@@ -1,0 +1,147 @@
+body {
+    font-family: "Dubai Medium";
+    margin: 0;
+    padding-bottom: 30px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+
+h1 {
+    text-align: left;
+    font-size: 2.5em;
+    color: #333;
+    padding-left: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+    padding-left: 20px;
+}
+
+/* المربع الخاص بكل سيارة */
+.car-selection {
+    width: 100%;
+    max-width: 550px;
+    height: 650px; /* ارتفاع المربع */
+    background: linear-gradient(to bottom, #ad2831 35%, #ffffff 25%); /* ربع بنفسجي */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.image-container {
+    position: relative; /* اجعل الحاوية تحتوي على position relative */
+    width: 100%;
+}
+
+.image-container .background img {
+    width: 550px;
+    height: 380px; /* يمكنك التحكم بارتفاع الصورة */
+    object-fit: cover; /* الحفاظ على نسبة العرض */
+    margin-top: 20px; /* تغيير هذه القيمة لتحريك الصورة للأسفل */
+}
+
+/* الصورة داخل المربع */
+.car-selection .image img {
+    width: 100%; /* عرض الصورة يكون بنفس عرض المربع */
+    height: 50px; /* يمكنك التحكم بارتفاع الصورة */
+    object-fit: contain; /* للحفاظ على نسبة العرض إلى الارتفاع */
+    margin-bottom: 10px; /* تقليل المسافة بين الصورة والقائمة */
+}
+
+
+/* الحاوية التي تحتوي على المربعين */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* القوائم المنسدلة */
+.dropdowns {
+    width: 80%;
+    position: relative;
+    margin-top: -10px; /* رفع القائمة للأعلى أكثر */
+}
+
+.dropdowns select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    position: relative;
+    z-index: 10;
+    /* تعيين الحد الأقصى للارتفاع للقائمة المنسدلة */
+    max-height: 200px; /* هذا يعني أن القائمة ستعرض أربع سيارات فقط */
+    overflow-y: auto; /* ظهور شريط التمرير عند الحاجة */
+}
+
+
+label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    position: relative;
+    z-index: 10;
+}
+
+select:focus {
+    border-color: #ad2831;
+}
+
+/* الزر */
+.compare-button {
+    background-color: #ad2831;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    position: relative;
+    top: -10px; /* تحريك الزر للأعلى بمقدار 10px */
+    left: 498px;
+    
+}
+
+.compare-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    text-align: center;
+}
+
+.compare-button:hover:enabled {
+    background-color: #ad2831;
+}

@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 30px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: right;
+    
+}
+
+/* الحاوية التي تحتوي على المربعين */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* للتأكد أن المربعات تكون في الأعلى */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* المربع الخاص بكل سيارة */
+.car-selection {
+    width: 100%;
+    max-width: 550px;
+    background: linear-gradient(to bottom, #ad2831 35%, #ffffff); /* ربع بنفسجي */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* العناصر تبدأ من أعلى المربع */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    height: auto; /* جعل المربع قابل للتمدد حسب المحتوى */
+}
+
+/* الجزء الأحمر (اسم السيارة) */
+.car-info-header {
+    width: 90%;
+    background: #ad2831; /* اللون الأحمر */
+    color: white;
+    padding: 20px 80px 20px 20px;
+    font-size: 1.5em;
+    font-family: "Dubai Medium";
+    text-align: right;
+}
+
+/* الجزء الأبيض (معلومات السيارة) */
+.car-details {
+    width: 95%;
+    background: white;
+    padding-right: 60px;
+    color: #333;
+    font-size: 1.1em;
+    flex-grow: 5; /* يملأ المساحة المتبقية */
+    border-top: 1px solid #ccc;
+}
+
+/* القوائم المنسدلة 
+.dropdowns {
+    width: 80%;
+    position: relative;
+    margin-top: -10px; 
+} */
+/*
+.dropdowns select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    position: relative;
+    z-index: 10;
+    
+    max-height: 200px; 
+    overflow-y: auto; 
+} */
